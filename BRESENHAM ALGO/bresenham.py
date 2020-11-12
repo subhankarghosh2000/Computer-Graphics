@@ -19,7 +19,7 @@ def bresenham(x1,y1,x2,y2):
 				p_y=p_y+(2*dy)
 				Y.append(y)
 			x=x+1
-			X.append(x+1)
+			X.append(x)
 	else:
 		while y<y2:
 			if p_x>=0:
@@ -30,11 +30,11 @@ def bresenham(x1,y1,x2,y2):
 				p_x=p_x+(2*dx)
 				X.append(x)
 			y=y+1
-			Y.append(y+1)
+			Y.append(y)
 	for i in range(len(X)):
 		print('x = ', X[i],'y = ', Y[i])
 	plt.scatter(X,Y)
-	#plt.plot(X,Y)
+	plt.plot(X,Y)
 	plt.show()
 
 x1=int(input("Enter x coordinate of starting point : "))
